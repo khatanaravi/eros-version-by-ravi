@@ -1,0 +1,154 @@
+/* Heading Section */
+
+.next-section-heading{
+    text-align: center;
+    margin-top: 50px;
+}
+.next-section-heading h2 {
+    font-size: 30px;
+    color: var(--c1);
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Overlock', bold;
+}
+
+.next-section-heading p {
+    color: #6b7280;
+    font-size: 19px;
+    max-width: 100%;
+    margin: 30px auto;
+}
+
+/* Features Section */
+.next-section-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 90%;
+    margin: 40px auto;
+}
+
+.feature-column {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    flex: 1;
+}
+
+.feature-card {
+    background: none;
+    text-align: center;
+}
+
+.feature-card h3 {
+    font-size: 27px;
+    font-weight: bold;
+    font-family: 'Overlock', bold;
+    color: var(--c1);
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #4b5563;
+    font-size: 17px;
+    
+}
+
+/* Feature Image */
+.feature-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Call-to-Action Button */
+.know-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.knowMore-button {
+    background: var(--c2);
+    color: white;
+    padding: 10px 40px;
+    border: 2px solid var(--c1);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Overlock', bold;
+    transition: 0.3s;
+    border-radius: 25px;
+}
+
+.knowMore-button:hover {
+    background: var(--c1);
+    /* border: 2px solid var(--c2); */
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    /* Make feature images responsive on tablet */
+    .feature-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* For phone view (smaller than 576px) */
+@media (max-width: 576px) {
+
+    .next-section-heading h2 {
+        font-size: 21px;
+    }
+
+    .next-section-heading p {
+        font-size: 18px;
+        max-width: 92%;
+    }
+    .next-section-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Move image to the top */
+    .feature-image-container {
+        order: -1;
+        width: 100%;
+    }
+
+    /* Arrange feature cards in two columns */
+    .feature-column {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two in a row */
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Adjust text size */
+    .feature-card h3 {
+        margin-bottom: 10px;
+        font-size: 18px; /* Reduce heading font size */
+    }
+
+    .feature-card p {
+        font-size: 14px; /* Reduce paragraph font size */
+    }
+}

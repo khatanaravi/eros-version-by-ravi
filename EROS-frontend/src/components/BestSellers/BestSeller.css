@@ -1,0 +1,165 @@
+/* Featured Products Section */
+.featured-products-BestSeller {
+  padding: 50px 100px;
+  text-align: center;
+  background-color: #FFEEDB;
+  border-bottom: 1px solid var(--c1);
+}
+
+.featured-products-BestSeller h2 {
+  font-size: 2.5rem;
+  font-family: 'Overlock';
+  color: var(--c1);
+}
+
+/* Product Cards Grid */
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  /* background-color: white; */
+  justify-items: center;
+  padding-top: 20px;
+}
+
+.product-card-BestSeller {
+  width: 100%;
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card-BestSeller:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.product-card-BestSeller img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  /* margin-bottom: 10px; */
+}
+
+.product-card-BestSeller h3 {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: 'Overlock';
+  color: var(--c1);
+  /* margin-bottom: 30px; */
+}
+
+/* Heading Section */
+.heading {
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+}
+
+.heading h2 {
+  color: var(--c1);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.heading p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.heading button {
+  background-color: var(--c2);
+  color: white;
+  border: 2px solid var(--c1);
+  padding: 10px 40px;
+  margin: 30px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.heading button:hover {
+  background-color: var(--c1);
+  color: white;
+  border: 2px solid var(--c2);
+}
+
+.heading-separator {
+  width: 80px; /* Adjust size */
+  height: 15px;
+  margin: 0px auto 30px auto;
+  /* display: block; */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .featured-products-BestSeller h2 {
+    font-size: 2rem;
+  }
+
+  .products-container {
+    grid-template-columns: repeat(2, 1fr); /* Ensure 2 columns per row */
+  }
+}
+
+/* Tablets & Phones: Maintain Two Cards Per Row */
+@media (max-width: 768px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns per row */
+    gap: 15px;
+  }
+
+  .heading h2 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 18px;
+  }
+
+  .heading button {
+    padding: 8px 25px;
+    font-size: 14px;
+  }
+}
+
+/* Small Phones: Still Two Cards Per Row */
+@media (max-width: 576px) {
+
+  .featured-products-BestSeller{
+    padding: 20px;
+    
+  }
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px 20px;
+  }
+
+  .product-card-BestSeller {
+    width: 100%;
+  }
+
+  .product-card-BestSeller h3 {
+    font-size: 16px;
+    /* padding-bottom: 10px; */
+    margin-bottom: 15px;
+  }
+
+  .heading h2 {
+    font-size: 29px;
+  }
+  
+  .heading p {
+    font-size: 15px;
+  }
+
+  .heading button {
+    padding: 12px 40px;
+    font-size: 15px;
+  }
+}

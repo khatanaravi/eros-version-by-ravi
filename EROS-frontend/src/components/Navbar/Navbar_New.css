@@ -1,0 +1,509 @@
+
+/* svg path{
+  fill: #7cce7c;
+} */
+
+
+*{
+  font-family: 'poppins';
+}
+:root{
+  --primary_font: 'poppins';
+  --heading_font: 'Margin DEMO';
+  --c1: #BD9B16;
+  --c2: #B81D39;
+  /* --c2: #7cce7c; */
+  --c3: #000000;
+  --c4: #ECECEC;
+  --c5: #FFFFFF;
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 50px 0;
+  border-radius: 5px;
+  left: 0;
+  z-index: 1000;
+  /* display: none;  */
+}
+
+.dropdown-wrapper_navbar {
+  position: relative;
+}
+
+
+.dropdown-wrapper_navbar:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 20;
+  transform: translateY(-18%); 
+  display: flex; /* Ensure it appears */
+}
+
+
+
+.left{
+  padding: 10px;
+}
+
+.right{
+  padding: 10px;
+}
+
+.dropdown-menu .left{
+  border-right: 2px solid gray;
+}
+
+
+.dropdown-menu a {
+width: 235px;
+}
+
+
+.dropdown-menu a:hover {
+  color: var(--c2);
+  background: #f7e4c2;
+}
+
+.dropdown-menu{
+  display: flex;
+}
+
+.header1 .menu-bar i{
+  display: none;
+}
+
+.header1 .nav-link #close-btn{
+  display: none;
+}
+
+/* Offer Section */
+.offer_section {
+  top: 0px;
+  position: sticky;
+  background-color: var(--c5);
+  padding: 10px 0px;
+  color: var(--c1);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 2000;
+}
+
+/* Sticky Navbar */
+.sticky_div {
+  position: sticky;
+  top: 38px; /* This should match the height of .offer_section */
+  z-index: 2000;
+}
+
+.navbar {
+  background-color: white;
+  display: flex;
+  justify-content: right;
+  padding: 20px 20px;
+  align-items: center;
+  border: 0.1rem solid var(--c1);
+  position: relative; /* Ensure relative positioning */
+  z-index: 10;
+}
+
+/* Logo Styling */
+.navbar_logo {
+  position: absolute;
+  top: -40px; /* Move logo upwards to overlap */
+  left: 0px; /* Adjust left alignment */
+  height: 90px; /* Adjust size as needed */
+  z-index: 3000; /* Ensure it's above offer section & navbar */
+  background: white; /* Optional: to maintain logo clarity */
+  padding: 10px 10px 10px 17px; /* Adjust to make logo look good */
+}
+
+/* Navbar Menu */
+.navbar_menu_bars, #circle-arrow {
+  flex: 1;
+}
+
+.navbar_menu_bars {
+  display: none;
+}
+
+.responsive_navbar_links{
+  display: none;
+  
+}
+.responsive_navbar_links .active{
+  color: var(--c2);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.responsive_navbar_links a.active{
+  color: none;
+}
+
+.responsive_navbar
+.navbar_logo{
+  cursor: pointer;
+}
+
+.navbar_logo{
+  height: 100%;
+  cursor: pointer;
+  /* border: 1px solid var(--c1); */
+}
+.navbar_logo img{
+  /* width: 120px; */
+  height: 120px;
+  padding: 10px 11px;
+  margin: -15.5px -19px;
+  background-color: white;
+  border-right: 1px solid var(--c1);
+}
+.navbar_links{
+  font-size: 16px;
+  display: flex;
+  gap: 30px;
+  margin-right: 150px;
+}
+.link{
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--c1);
+  transition: 0.2s;
+}
+
+.navbar_links .active{
+  color: var(--c2);
+  font-weight: bold;
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  border-radius: 5px;
+  top: 253%; /* Adjusted to your requirement */
+  left: 0;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px); /* Smooth transition from above */
+  /* transition: visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease; */
+}
+
+
+
+.dropdown:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0); /* Moves into position */
+}
+
+
+.left{
+  padding: 10px;
+}
+
+.right{
+  padding: 10px;
+}
+
+.dropdown-menu .left{
+  border-right: 2px solid gray;
+}
+
+
+.dropdown-menu a {
+  display: flex;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: var(--c1);
+  font-size: 14px;
+  transition: background-color 0.31s ease;
+}
+
+
+.dropdown-menu a:hover {
+  color: #9D0910;
+  background: #f7e4c2;
+}
+
+.dropdown-menu{
+  display: flex;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+
+
+
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  max-width: 90%;
+}
+
+/* Heading */
+.modal-content h2 {
+  margin-bottom: 10px;
+  color: black;
+}
+
+/* Phone Number */
+.contact-number {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  transition: 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+}
+
+.whatsapp-button:hover {
+  background-color: #1da851;
+}
+
+/* Divider */
+.divider {
+  margin: 10px 0;
+  font-weight: bold;
+  color: grey;
+}
+
+/* Close Button */
+.close-button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+}
+
+.close-button:hover {
+  background: darkred;
+}
+
+ 
+
+/* Responsive */
+@media (max-width: 820px) {
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .whatsapp-button, .close-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .contact-number {
+    font-size: 14px;
+  }
+}
+
+
+.hide{
+  display: none;
+}
+
+@keyframes open-navbar {
+  0%{
+    opacity: 0%;
+    /* transform: translateX(100%); */
+  }
+  100%{
+    opacity: 100%;
+    /* transform: translateX(0); */
+  }
+}
+@keyframes gapAnimation {
+  0%{
+    gap: 1px;
+  }
+  100%{
+    gap: 30px;
+  }
+}
+
+/* Responsive  */
+
+@media screen and (max-width: 1310px) {
+  .best_choice_white_fade_bg{
+    height: 700px;
+  }
+}
+@media screen and (max-width: 940px) {
+  .link{
+    font-size: small;
+  }
+  iframe{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 850px) {
+
+
+  .sticky_div{
+    position: sticky;
+  }
+  .search_section{
+    padding: 5px 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .fav_cart_icons_hide{
+    display: none;
+  }
+  .navbar{
+    padding: 10px 5px;
+  }
+
+  .navbar_logo img{
+    width: 90px;
+    height: 100%;
+  }
+  .navbar_menu_bars{
+    display: block;
+  }
+  .navbar_links{
+    display: none;
+  }
+  .responsive_navbar{
+    animation: open-navbar 0.2s forwards;
+    position: absolute;
+    background-color: var(--c1);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+    transition: 0.3s;
+  }
+  .responsive_navbar_links{
+    animation: gapAnimation 0.3s forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .link{
+    color: white;
+  }
+  .link_active{
+    font-weight: bold;
+    color: var(--c2);
+  }
+  .responsive_navbar_cart_wishlist{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .fav_cart_icons{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 660px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+  }
+
+  /* Center Logo */
+  .navbar_logo {
+    position: relative;
+
+    top: 0px; /* Adjust so it overlaps offer section */
+    height: 70px; /* Reduce size for mobile */
+    z-index: 3000;
+    background: white;
+    padding: 5px;
+  }
+
+  /* Search Button on Left */
+  #Search {
+    flex: 1;
+    /* display: flex; */
+    justify-content: right;
+    margin: 0px;
+    padding: 5px 50px;
+    
+  }
+
+  /* Menu Button on Right */
+  .navbar_menu_bars {
+    flex: 0.5;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--c1);
+  }
+
+  .navbar_menu_bars i {
+    font-size: 24px; /* Adjust icon size */
+    padding: 5px;
+  }
+
+  /* Hide Other Elements */
+  .navbar_items,
+  #order_online,
+  #circle-arrow {
+    display: none;
+  }
+
+  /* Offer Section Stays Same */
+  .offer_section {
+    font-size: 12px;
+    height: 44px;
+  }
+}
+
+
+
+
+

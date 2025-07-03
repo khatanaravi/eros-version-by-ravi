@@ -1,0 +1,248 @@
+.app_download_section{
+  width: 100%;
+  height: 400px;
+  background-image: url('../assets/app_section_bg.png');
+  background-position: center;
+  /* background-repeat: no-repeat; */
+}
+.white_gradient{
+  position: relative;
+  z-index: 1000;
+  height: 400px;
+  width: 100%;
+  background-image: linear-gradient(to left,#ffffff00, #ffffff, #ffffff, #ffffff);
+  padding: 0px 80px;
+  display: flex;
+  align-items: end;
+  justify-content: space-evenly;
+}
+.download_app_links{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  height: 400px;
+  gap: 20px;
+  width: 40%;
+}
+.app_links_heading{
+  font-size: 28px;
+  font-weight: bold;
+}
+.hr_line{
+  height: 4px;
+  width: 100%;
+  border-radius: 100px;
+  background-color: black;
+}
+.app_links{
+  display: flex;
+  gap: 30px;
+}
+
+.app_links img{
+  height: 60px;
+  cursor: pointer;
+}
+.scanner_section{
+  display: flex;
+  width: 50%;
+  align-items: end;
+  justify-content: end;
+}
+.scanner_section span{
+  font-weight: bold;
+  font-size: large;
+  width: 200px;
+}
+#arrow_png{
+  height: 100px;
+  transform: rotate(90deg);
+}
+#app_qr_png{
+  height: 300px;
+  margin-left: 30px;
+}
+
+/* Heading Section */
+.heading-app {
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+  border-top: 1px solid var(--c1);
+}
+
+.heading-app h2 {
+  color: var(--c1);
+  font-size: 2.5rem;
+  font-family: 'Overlock';
+  margin-bottom: 10px;
+}
+
+.heading-app p {
+  font-size: 20px;
+  font-family: 'Overlock';
+  margin-bottom: 20px;
+}
+
+.heading-app button {
+  background-color: var(--c2);
+  color: white;
+  border: 2px solid var(--c1);
+  padding: 10px 40px;
+  margin: 30px;
+  font-size: 16px;
+  font-family: 'Overlock';
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.heading-app button:hover {
+  background-color: var(--c1);
+  color: white;
+}
+
+.heading-separator-like {
+  width: 80px; /* Adjust size */
+  height: 15px;
+  margin: 0px auto 30px auto;
+  /* display: block; */
+}
+
+@media screen and (max-width: 800px) {
+  .white_gradient{
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .app_download_section{
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .white_gradient {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .download_app_links {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    gap: 15px;
+    padding-top: 15px;
+  }
+
+  .app_links {
+    justify-content: center;
+  }
+
+  .scanner_section {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    border-bottom: 1px solid var(--c1);
+  }
+
+  #arrow_png {
+    height: 50px;
+    transform: rotate(180deg);
+  }
+
+  #app_qr_png {
+    height: 200px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .white_gradient {
+    padding: 0px;
+    width: 100%;
+    background-color: white;
+  }
+
+  .app_download_section{
+    background-image: none;
+  }
+
+  .app_links_heading {
+    font-size: 22px;
+  }
+
+  .app_links img {
+    height: 50px;
+  }
+
+  .scanner_section span {
+    font-size: medium;
+  }
+
+  #app_qr_png {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .app_links img {
+    height: 40px;
+  }
+
+  .scanner_section span {
+    font-size: small;
+    width: 150px;
+    text-align: center;
+  }
+
+  #arrow_png {
+    height: 40px;
+  }
+
+  #app_qr_png {
+    height: 150px;
+  }
+}
+
+
+
+/* Tablets & Phones: Maintain Two Cards Per Row */
+@media (max-width: 768px) {
+
+  .heading h2 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 18px;
+  }
+
+  .heading button {
+    padding: 8px 25px;
+    font-size: 14px;
+  }
+}
+
+/* Small Phones: Still Two Cards Per Row */
+@media (max-width: 576px) {
+  .heading h2 {
+    font-size: 29px;
+  }
+  
+  .heading p {
+    font-size: 15px;
+  }
+
+  .heading button {
+    padding: 12px 40px;
+    font-size: 15px;
+  }
+}

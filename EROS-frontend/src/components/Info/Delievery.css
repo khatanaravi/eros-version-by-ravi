@@ -1,0 +1,463 @@
+.delivery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-image: url(../assets/art.png);
+
+    /* Background Image Properties */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    width: 100%; /* Ensure full width */
+    
+  }
+  
+  .delivery-card {
+    background: #FFEEDB;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 60%;
+  }
+  
+ /* Tabs Section */
+ .tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -20px 210px 20px 210px;
+    position: relative;
+    /* border-bottom: 2px solid #ccc; */
+  }
+  
+  .tabs button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    gap: 8px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .tabs button.active {
+    color: var(--c2);
+  }
+  
+  .tab-divider {
+    height: 30px;
+    width: 1px;
+    background-color: var(--c1);
+    margin: 0 10px;
+  }
+  
+  /* 👇 Underline - always matches the active tab */
+  .tabs .underline {
+    position: absolute;
+    bottom: -2px;
+    left: 90px;
+    height: 3px;
+    width: 28%;
+    background: var(--c2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Adjust X based on button + divider width */
+  .tabs.pickup .underline {
+    transform: translateX(131px); /* 120px button + 10px divider + 1px border */
+  }
+    
+  
+  /* Title & Subtitle */
+  .subtitle {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: var(--c2);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    text-transform: capitalize;
+    font-size: 24px;
+    font-family: sans-serif;
+    position: relative;
+    padding-bottom: 25px;
+    font-weight: 500;
+  }
+  
+  
+  /* Location Section */
+  .location-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .location-btn {
+    background: var(--c2);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    /* font-family: sans-serif; */
+    /* font-weight: 600; */
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .separator {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+/* Dropdowns Section */
+.dropdowns {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--c1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    position: relative;
+}
+
+select {
+    padding: 12px 16px;
+    font-size: 16px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    appearance: none;
+    width: 180px;
+    outline: none;
+}
+
+select:first-child {
+    border-right: 1px solid var(--c1);
+}
+
+
+.outlet-dropdown{
+    border: none;
+}
+
+.dropdown-wrapper_info {
+    position: relative;
+  }
+
+/* Default: Web/Desktop (Arrows stay on the right) */
+.dropdown-wrapper_info::after {
+    content: "▼";
+    font-size: 14px;
+    color: black;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+/* Adjusting Arrow Positions for Web */
+.dropdowns::after {
+    right: 16px;
+}
+
+.dropdowns::before {
+    left: 155px;
+}
+  
+select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* Modal Overlay */
+.modal-overlay-home {
+    margin-top: 50px;
+    position: fixed;    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden; /* Prevents unwanted scroll or shifts */
+}
+
+
+/* Prevents body scroll when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+
+.modal-header-wrapper {
+    display: flex;
+    justify-content: space-between; /* Align heading left, close icon right */
+    align-items: center;
+}
+
+/* Modal Container */
+.modal-container-home {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px;
+    position: relative;
+}
+
+/* Modal Header */
+.modal-header-home {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    margin: 0;
+}
+
+
+/* Grey Separator Line */
+.modal-separator-home {
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+}
+
+/* Modal Image */
+.modal-image-home {
+    width: 200px; /* Increased size */
+    height: 140px;
+    display: block; /* Centering */
+    margin: 10px auto; 
+}
+
+
+/* Modal Message */
+.modal-message-home {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Warning Text */
+.modal-warning-home {
+    font-size: 14px;
+    color: red;
+    /* font-weight: bold; */
+    background: rgba(255, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Modal Buttons */
+.modal-buttons-home {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.modal-buttons-home button {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    /* font-weight: bold; */
+    transition: background 0.3s ease;
+}
+
+/* Cancel Button */
+.modal-buttons-home .cancel-btn-home {
+    background: white;
+    border: 2px solid black;
+    color: black;
+}
+
+/* .modal-buttons-home .cancel-btn-home:hover {
+    background: #f5ebe7;
+} */
+
+/* Confirm Button */
+.modal-buttons-home .confirm-btn-home {
+    background: var(--c2);
+    color: white;
+    border-radius: 25px;
+}
+
+.modal-buttons-home .confirm-btn-home:hover {
+    background: var(--c1);
+}
+
+/* Close Icon */
+.close-icon-home {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Existing styles remain unchanged */
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .delivery-card {
+        width: 80%;  /* Increase width on tablets */
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .location-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    select {
+        font-size: 14px;
+        padding: 10px 12px;
+        width: 160px;  /* Reduce width for smaller screens */
+    }
+
+    .modal-container-home {
+        width: 400px;
+        padding: 20px;
+    }
+
+    .modal-image-home {
+        width: 160px;
+        height: 120px;
+    }
+
+    .modal-buttons-home button {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .delivery-container {
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .delivery-card {
+        width: 95%;  /* Adjust for smaller screens */
+        padding: 15px;
+    }
+
+    .tabs {
+        gap: 20px; /* Reduce space between tabs */
+    }
+
+    .tabs button {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .location-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .location-btn {
+        font-size: 14px;
+        width: 100%; /* Make button full-width */
+        padding: 12px;
+        justify-content: center;
+    }
+
+    .dropdowns {
+        flex-direction: row;
+        /* gap: 10px; */
+        align-items: center;
+        width: 100%;
+    }
+
+    .dropdown-wrapper_info {
+        width: 100%;
+        max-width: 320px;
+        position: relative;
+    }
+
+    .dropdowns::before {
+        left: auto;
+        right: 5px; /* Move arrow inside */
+    }
+
+    .dropdowns::after {
+        right: auto;/* Hide extra arrow */
+        left: 135px;
+    }
+
+    select {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Modal */
+    .modal-container-home {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .modal-header-home {
+        font-size: 18px;
+    }
+
+    .modal-image-home {
+        width: 140px;
+        height: 100px;
+    }
+
+    .modal-message-home {
+        font-size: 14px;
+    }
+
+    .modal-buttons-home {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .modal-buttons-home button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+  
+  

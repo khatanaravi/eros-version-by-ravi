@@ -1,0 +1,81 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff5e1;
+    padding: 10px 20px;
+    font-family: "Arial", sans-serif;
+    width: 100wh;
+  }
+  
+.navbar .icon-box{
+    height: 60px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    position: relative;
+}
+
+.icon-box #icon:nth-child(1){
+    left: 7.1rem;
+    top: 1.3rem;
+    font-size: 1.1rem;
+}
+  
+.icon-box #icon:nth-child(2){
+    left: 9.5rem;
+    top: 1.3rem;
+    font-size: 1.1rem;
+}
+
+.icon-box .bell{
+  position: absolute;
+  top: 0.8rem;
+  right: 10.9rem;
+  background: #d21d1d;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 41%;
+    cursor: pointer;
+  }
+  
+  .avatar {
+    background: #7b1111;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  
+  .profile p {
+    margin: 0;
+    font-size: 14px;
+    color: #000;
+  }
+  
+  .profile i {
+    font-size: 16px;
+    color: #000;
+  }
+
+  .profile .down{
+    top: 1.2rem;
+    right: 0.5rem;
+  }

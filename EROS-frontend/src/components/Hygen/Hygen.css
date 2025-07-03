@@ -1,0 +1,106 @@
+.quality
+    {   
+        display: flex;
+        width: 100%;
+        height: 80px;
+        background-color: #E4B8B8;
+        align-items: center;
+        justify-content: center;
+        gap: 8rem;
+    }
+    
+    .quality .img
+    {
+        height: 100%;
+        width: 260px;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+       
+        
+    }
+    
+    #vegi
+    {
+        height: 45px;
+        width: 45px;
+    }
+    .quality .img img{
+        margin: -12px 12px;
+    }
+    
+    
+    .quality .img span{
+        font-size: 1.2rem;
+        font-family: 'poppins';
+    }
+
+    @media (max-width: 768px) {
+        .top-box, .bottom-box {
+            position: relative;
+            flex-direction: column;
+            text-align: center;
+            padding: 15px;
+            justify-content: center;
+        }
+    
+    
+        .top-box .img img, .bottom-box .img2 img {
+            width: 350px;
+            height: 350px;
+        }
+    
+        .top-right, .bottom-left {
+            padding: 10px;
+        }
+    
+        button {
+            align-self: center;
+        }
+    
+         #vegi{
+            height: 20px;
+        }
+    
+       .quality{   
+        display: flex;
+        max-width: 100wh;
+        padding-left: 7rem;
+        height: 50px;
+        background-color: #E4B8B8;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        margin-bottom: 20px;
+        }
+    
+       .quality .img
+        {
+        height: 100%;
+        width: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+       }
+    .quality .verify
+    {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+    
+    
+    .quality .img img{
+        margin: -12px 12px;
+        height: 20px;
+    }
+    
+    
+    .quality .img span{
+        width: 60px;
+        font-size: 12px;
+        font-family: 'poppins';
+    } 
+    }
+    

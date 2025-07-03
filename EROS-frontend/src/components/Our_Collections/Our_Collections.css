@@ -1,0 +1,175 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7e3c1; 
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  color: #b32727; /* Rich red color */
+  margin: 20px 0;
+}
+
+/* Collections Container */
+.collections-container {
+  display: flex;
+  gap: 75px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+/* Collection Card */
+.collection-card {
+  position: relative;
+  width: 643px;
+  height: 393px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collection-card:hover {
+  transform: scale(1.03); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+/* Image Styling */
+.image-container {
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content Styling */
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%; /* Start hidden */
+  background: rgba(134, 116, 116, 0); /* Fully transparent initially */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  overflow: hidden; /* Hide content until it slides up */
+  transition: height 0.5s ease, background 0.5s ease; /* Smooth sliding effect */
+}
+
+.content h3 {
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  opacity: 0; /* Hidden initially */
+  transform: translateY(20px); /* Slide up effect */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.content p {
+  font-size: 18px;
+  margin: 0;
+  text-align: left;
+  color: #ffffff;
+  opacity: 0; /* Hidden initially */
+  transform: translateY(20px); /* Slide up effect */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.arrow-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0; /* Hidden initially */
+  transform: translateY(20px); /* Slide up effect */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow-button:hover {
+  background-color: white;
+  color: #000;
+}
+
+.collection-card:hover .content {
+  height: 100%; /* Slide content up into full view */
+  background: rgba(134, 116, 116, 0.5); /* Background fades in */
+}
+
+.collection-card:hover .content h3 {
+  opacity: 1; /* Title fades in */
+  transform: translateY(0); /* Slide into place */
+}
+
+.collection-card:hover .content p {
+  opacity: 1; /* Subtitle fades in */
+  transform: translateY(0); /* Slide into place */
+}
+
+.collection-card:hover .arrow-button {
+  opacity: 1; /* Arrow fades in */
+  transform: translateY(0); /* Slide into place */
+}
+
+/* Media Query for Phones Only */
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 30px; /* Smaller font size for title */
+  }
+
+  .collections-container {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Reduce gap */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .collection-card {
+    width: 100%; /* Take most of the screen width */
+    max-width: none;
+    height: auto; /* Adjust height to content */
+  }
+
+  .image-container {
+    height: 200px; /* Smaller image height */
+  }
+
+  .content h3 {
+    font-size: 20px; /* Adjust font size for titles */
+  }
+
+  .content p {
+    font-size: 14px;
+    width: 80%; /* Adjust font size for descriptions */
+  }
+
+  .arrow-button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,163 @@
+.scroll-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    display: flex;
+  }
+  
+  .card-list {
+    display: flex; /* Arrange cards in a row */
+    gap: 20px; /* Add space between cards */
+  }
+  
+  .card-container {
+    background-color: #f7e3c1;
+    border-radius: 15px;
+    width: 350px;
+    height: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+    flex-shrink: 0; /* Prevent cards from shrinking */
+  }
+
+  .card-container:hover{
+    transform: scale(1.03);
+  }
+  
+  .image-section {
+    height: 60%;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .details-section {
+    padding: 15px;
+  }
+  
+  .product-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .price-and-weight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .weight-options {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: flex-start;
+  }
+  
+  .quantity-label {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #E4B8B8;
+    color: #9D0910;
+    width: auto;
+    transition: all 0.3s ease; /* Add smooth transition */
+  }
+  
+  .quantity-label:hover {
+    background-color: #9D0910;
+    color: #E4B8B8;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  }
+  
+  .quantity-label.active {
+    background-color: #9D0910;
+    color: #E4B8B8;
+    font-weight: bold;
+  }
+  
+  .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #9D0910;
+    /* margin-left: 20px; */
+  }
+  
+  .self-life {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .quantity-controller {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantity-controller button {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 23px;
+    
+  }
+
+  .quantity-controller
+  {
+    border: 1px solid #9D0910;
+    height: 44px;
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  .quantity-controller button:hover {
+    background-color: #E4B8B8;
+    width: 40%;
+    height: 100%;
+    color: #9D0910;
+    border-color: #E4B8B8;
+  }
+  
+  .quantity-controller span {
+    font-size: 23px;
+  }
+  
+  .add-to-cart-button {
+    background-color: #E4B8B8;
+    color: #9D0910;
+    padding: 10px 20px;
+    width: 60%;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #c73c3c;
+    color: #E4B8B8;
+  }
+  

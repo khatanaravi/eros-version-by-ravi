@@ -1,0 +1,93 @@
+
+.quality
+{   
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: #E4B8B8;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+}
+
+.quality .img
+{
+    height: 100%;
+    width: 260px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+#vegi
+{
+    height: 45px;
+    width: 45px;
+}
+.quality .img img{
+    margin: -12px 12px;
+}
+
+
+.quality .img span{
+    font-size: 1.2rem;
+    font-family: 'poppins';
+} 
+
+
+
+
+
+
+
+.card-box
+{   display: block;
+    height: 100vh;
+    width: 100%;
+    padding: 0px 30px 30px 30px;
+    background-color: #f7e4c2;
+
+
+}
+
+.card-box .card{
+    height: 100vh;
+    width: 100%;
+    background-color: #f7e4c2;
+    /* border: 1px solid black; */
+}
+
+.card-box .card .h3
+{
+  font-size: 2.4rem;
+  margin: 0rem 0rem 0.4rem 0rem;
+  padding-top: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #9D0910;
+  
+}
+
+.card-box .card .p{
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 0.9rem;
+}
+
+.card-box .card .button
+{
+    height: 2.81rem;
+    width: 9rem;
+    border: none;
+    border-radius: 0.54rem;
+    font-size: 1.4rem;
+    margin: 0rem 1.2rem 1.2rem 0rem;
+    cursor: pointer;
+    transition: 0.4s ease ease-in-out;
+
+}
+
+.card-box .card .button:hover{
+    transform: scale(1.02);
+}

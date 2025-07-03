@@ -1,0 +1,117 @@
+/* Featured Products Section */
+.cards-featured-products {
+  margin-top: 30px;
+  background-color: #FFEEDB;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.cards-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Overlock', bold;
+  color: var(--c1); /* Gold color */
+  /* margin-bottom: 30px; */
+}
+
+/* Container for Products */
+.cards-products-container {
+  display: grid;
+  margin: 0px 180px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Product Cards */
+/* .cards-product-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+.cards-product-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 7px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 250px; /* Adjust this value to make the cards narrower */
+  margin: 0 auto; /* Centers the card */
+}
+
+.cards-product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.cards-product-card img {
+  width: 190px;
+  height: 180px;
+  border-radius: 10px ;
+  /* margin-bottom: 15px; */
+}
+
+.cards-product-title {
+  font-size: 20px;
+  font-family: 'Overlock', bold;
+  font-weight: bold;
+  color: var(--c1); /* Red color for product names */
+}
+
+.cards-subtitle {
+  font-size: 20px;
+  color: #b22222;
+  font-weight: bold;
+  font-family: 'Overlock', bold;
+  margin-bottom: 5px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards-products-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0px 50px; /* Reduce margin for better fit */
+    gap: 20px; /* Slightly reduce gap */
+  }
+
+  .cards-product-card img {
+    width: 200px; /* Reduce image size for better layout */
+    height: 230px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-featured-products {
+    padding: 20px 10px; /* Reduce padding */
+  }
+
+  .cards-title {
+    font-size: 28.8px; /* Make title smaller */
+  }
+
+  .cards-products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-product-card {
+    padding: 0px;
+  }
+
+  .cards-product-card img {
+    width: 160px; /* Further reduce image size */
+    height: 150px;
+  }
+
+  .cards-product-title{
+    font-size: 18px;
+    padding-bottom: 11px;
+  }
+}
+
