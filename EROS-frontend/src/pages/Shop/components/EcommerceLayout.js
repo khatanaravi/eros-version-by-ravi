@@ -40,11 +40,11 @@ const EcommerceLayout = () => {
   const rawProducts = useProducts();            // []
 
   // 2️⃣  Convert once raw data changes
-  const Products = useMemo(
-    () => formatProducts(rawProducts),
-    [rawProducts]
-  );
-  console.log(Products)
+  useEffect(() => {
+  setProducts(formatProducts(rawProducts));
+}, [rawProducts]);
+  
+
 
 // setProducts(productStep1);
   // Fetch data
@@ -52,19 +52,25 @@ const EcommerceLayout = () => {
 
     const fetchData = async () => {
       // const products = await fetchProducts();
-      const categoriesData = await fetchCategories(Products);
-      setAllProducts(Products);
+      const categoriesData = await fetchCategories();
+      // setAllProducts(Products);
       setCategories(categoriesData);
     };
     fetchData();
-    // console.log( fetchProducts())
-  }, []);
 
+  }, []);
+    console.log( categories)
+    
+  // setAllProducts(Products);
+  // setAllProducts(products)
+    // console.log(allProducts);
+  
+  
   // Sorting logic
   useEffect(() => {
-    if (!allProducts || allProducts.length === 0) return;
+    if (!products || products.length === 0) return;
 
-    const sortedProducts = [...allProducts];
+    const sortedProducts = [...products];
     switch (sortOption) {
       case "az":
         sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
@@ -81,8 +87,12 @@ const EcommerceLayout = () => {
       default:
         break;
     }
-    setAllProducts(sortedProducts);
+    console.log(sortedProducts);
+    setProducts(sortedProducts);
   }, [sortOption]);
+// console.log(Products);
+
+
 
   const handleCategorySelect = (categoryId) => {
     setSelectedCategory(categoryId);
@@ -144,7 +154,7 @@ const EcommerceLayout = () => {
         <PromosSection />
         <BestSellers onAddToCart={onAddToCart} />
         <CategoryProducts
-          Products={Products}
+          Products={products}
           selectedCategory={selectedCategory}
           onAddToCart={onAddToCart}
         />

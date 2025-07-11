@@ -12,7 +12,7 @@ const CategoryProducts = ({
   const [priceMapping, setPriceMapping] = useState({}); // Store dynamic prices
 
 
-  console.log(Products)
+  // console.log(Products)
   useEffect(() => {
     if (selectedCategory === 0) {
       setFilteredProducts(Products || []);
@@ -47,7 +47,7 @@ const CategoryProducts = ({
       [productId]: basePrice * (weightMultiplier[weight] || 1), // Default to 1 if weight is missing
     }));
   };
-  console.log(filteredProducts)
+  // console.log(filteredProducts)
 
   if (!filteredProducts || filteredProducts.length === 0) {
     return <p>No products available</p>;

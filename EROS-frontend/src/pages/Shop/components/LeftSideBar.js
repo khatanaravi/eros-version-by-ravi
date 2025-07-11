@@ -45,7 +45,7 @@ const LeftSidebar = ({
                 onClick={() => handleCategoryClick(cat.id)}
               >
                 <img src={cat.image} alt={cat.name} className="category-image" />
-                <span className="category-name">{cat.name}</span>
+                <span className="category-name">{cat.category}</span>
                 <span className="category-count">({cat.count})</span>
               </li>
 
